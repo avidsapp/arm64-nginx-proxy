@@ -1,14 +1,13 @@
 version: '2'
 services:
   nginx-proxy:
-    image: nginxproxy/nginx-proxy
+    image: nginxproxy/nginx-proxy:latest@sha256:0fbe9cae584beba09427399d116654367ae23539e907dc8227a9b64f7a6e4a1b
     container_name: nginx-proxy
     ports:
       - "80:80"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
-
-  whoami:
-    image: jwilder/whoami
     environment:
-      - VIRTUAL_HOST=whoami.local
+      - ENABLE_IPV6=true
+      - VIRTUAL_PORT=443
+      - DEFAULT_HOST=${DOMAINS}

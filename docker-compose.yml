@@ -6,8 +6,9 @@ services:
     ports:
       - "80:80"
     volumes:
+      - ./custom/my_proxy.conf:/etc/nginx/conf.d/my_proxy.conf:ro
       - /var/run/docker.sock:/tmp/docker.sock:ro
-    environment:
-      - ENABLE_IPV6=true
-      - VIRTUAL_PORT=443
-      - DEFAULT_HOST=${DOMAINS}
+    # environment:
+      # - ENABLE_IPV6=true
+      # - VIRTUAL_PORT=443
+      # - DEFAULT_HOST=${DEFAULT_HOST}

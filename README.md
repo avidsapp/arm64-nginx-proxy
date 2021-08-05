@@ -2,7 +2,4 @@
 
 ## Setup and Usage
 
-- Follow upstream repo instructions here: [@evertramos/docker-wordpress](https://github.com/evertramos/docker-wordpress)
-
-## Acknowledgements
-- [@evertramos](https://github.com/evertramos)
+- Follow upstream repo instructions here: [@nginx-proxy](https://github.com/nginx-proxy/nginx-proxy)

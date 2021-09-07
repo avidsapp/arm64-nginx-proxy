@@ -2,6 +2,7 @@ version: '2'
 services:
   nginx-proxy:
     image: nginxproxy/nginx-proxy:latest@sha256:0fbe9cae584beba09427399d116654367ae23539e907dc8227a9b64f7a6e4a1b
+    restart: always
     container_name: nginx-proxy
     ports:
       - "80:80"

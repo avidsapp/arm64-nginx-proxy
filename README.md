@@ -29,7 +29,7 @@ Then run:
 sudo systemctl daemon-reload
 sudo systemctl enable proxy-startup.service
 ```
-Then add a [reboot CRON job](https://askubuntu.com/questions/290099/how-to-run-a-script-during-boot-as-root) under the root user - change `<USER>` and run `sudo crontab -e`:
+Then add a [reboot CRON job](https://askubuntu.com/questions/290099/how-to-run-a-script-during-boot-as-root) under the root user - `sudo su -` and run `sudo crontab -e`:
 ```
 @reboot /home/<USER>/proxy/proxy-startup.sh
 ```
